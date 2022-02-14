@@ -78,9 +78,9 @@ int checkPosition(void) {
   yPos = map(yOut, 0, 1023, 256, -256); //Remaps Max and Min of JoyStick so 0 is aprox center
 
   if (yPos > 200)
-    return RIGHT;
-  else if (yPos < -200)
     return LEFT;
+  else if (yPos < -200)
+    return RIGHT;
   else if (abs(yPos) < 200)
     return NEUTRAL;
 }
